@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
-import 'package:islami/colors.dart';
-import 'package:islami/page_views.dart';
+
 import 'package:islami/tabs/hadeth_tab.dart';
-import 'package:islami/tabs/quran_tab.dart';
+import 'package:islami/tabs/quran/quran_tab.dart';
 import 'package:islami/tabs/radio_tab.dart';
 import 'package:islami/tabs/sebha_tab.dart';
 import 'package:islami/tabs/settings_tab.dart';
@@ -24,22 +23,20 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body:tabs[_selectedTabIndex],
+      body: tabs[_selectedTabIndex],
       bottomNavigationBar: GNav(
           backgroundColor: Color(0xFFE2BE7F),
           tabBackgroundColor: Colors.brown.shade700,
           tabBorderRadius: 50,
-            // color: Colors.black,
-            activeColor: Colors.white,
-          haptic: true  ,
-
+          // color: Colors.black,
+          activeColor: Colors.white,
+          haptic: true,
           selectedIndex: _selectedTabIndex,
           onTabChange: (value) {
             setState(() {
               _selectedTabIndex = value;
             });
           },
-
           gap: 10,
           tabMargin: EdgeInsets.all(2),
           padding: EdgeInsets.symmetric(
@@ -55,8 +52,9 @@ class _HomeScreenState extends State<HomeScreen> {
               leading: SvgPicture.asset(
                 "assets/images/quran_tab_bottom_nav_icon.svg",
                 width: 20,
-                colorFilter: ColorFilter.mode(_selectedTabIndex==0? Colors.white : Colors.black, BlendMode.srcIn),
-
+                colorFilter: ColorFilter.mode(
+                    _selectedTabIndex == 0 ? Colors.white : Colors.black,
+                    BlendMode.srcIn),
               ),
             ),
             GButton(
@@ -65,7 +63,9 @@ class _HomeScreenState extends State<HomeScreen> {
                 leading: SvgPicture.asset(
                   "assets/images/hadeth_tab_bottom_nav_icon.svg",
                   width: 20,
-                  colorFilter: ColorFilter.mode(_selectedTabIndex==1? Colors.white : Colors.black, BlendMode.srcIn),
+                  colorFilter: ColorFilter.mode(
+                      _selectedTabIndex == 1 ? Colors.white : Colors.black,
+                      BlendMode.srcIn),
                 )),
             GButton(
                 icon: Icons.clear,
@@ -73,8 +73,9 @@ class _HomeScreenState extends State<HomeScreen> {
                 leading: SvgPicture.asset(
                   "assets/images/sebha_tab_bottom_nav_icon.svg",
                   width: 20,
-                  colorFilter: ColorFilter.mode(_selectedTabIndex==2? Colors.white : Colors.black, BlendMode.srcIn),
-
+                  colorFilter: ColorFilter.mode(
+                      _selectedTabIndex == 2 ? Colors.white : Colors.black,
+                      BlendMode.srcIn),
                 )),
             GButton(
                 icon: Icons.clear,
@@ -82,14 +83,14 @@ class _HomeScreenState extends State<HomeScreen> {
                 leading: SvgPicture.asset(
                   "assets/images/radio_tab_bottom_nav_icon.svg",
                   width: 20,
-                  colorFilter: ColorFilter.mode(_selectedTabIndex==3? Colors.white : Colors.black, BlendMode.srcIn),
-
-
+                  colorFilter: ColorFilter.mode(
+                      _selectedTabIndex == 3 ? Colors.white : Colors.black,
+                      BlendMode.srcIn),
                 )),
             GButton(
-                icon: Icons.settings_outlined,
-                text: "Settings",
-                ),
+              icon: Icons.settings_outlined,
+              text: "Settings",
+            ),
           ]),
     );
   }

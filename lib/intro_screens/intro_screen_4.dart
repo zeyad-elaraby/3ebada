@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:islami/colors.dart';
+import 'package:islami/my_theme_data.dart';
 
 class IntroScreen4 extends StatelessWidget {
   const IntroScreen4({super.key});
