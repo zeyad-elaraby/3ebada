@@ -17,7 +17,7 @@ class MyThemeData {
             GoogleFonts.alexandria(color: primaryColor, fontSize: 25),
         headlineSmall:
             GoogleFonts.alexandria(color: primaryColor, fontSize: 20),
-        labelLarge: GoogleFonts.elMessiri(color: primaryColor , fontSize: 25),
+        labelLarge: GoogleFonts.elMessiri(color: primaryColor , fontSize: 20),
         labelMedium: GoogleFonts.elMessiri(color: primaryColor , fontSize: 15),
         labelSmall: GoogleFonts.elMessiri(color: primaryColor , fontSize: 10),
         bodyLarge: GoogleFonts.alexandria(color: primaryColor, fontSize: 25),
