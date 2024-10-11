@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
+import 'package:islami/my_theme_data.dart';
 
 import 'package:islami/tabs/hadeth/hadeth_tab.dart';
 import 'package:islami/tabs/quran/quran_tab.dart';
 import 'package:islami/tabs/radio_tab.dart';
-import 'package:islami/tabs/sebha_tab.dart';
+import 'package:islami/tabs/sebha/sebha_tab.dart';
 import 'package:islami/tabs/settings_tab.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -28,7 +29,6 @@ class _HomeScreenState extends State<HomeScreen> {
           backgroundColor: Color(0xFFE2BE7F),
           tabBackgroundColor: Colors.brown.shade700,
           tabBorderRadius: 50,
-          // color: Colors.black,
           activeColor: Colors.white,
           haptic: true,
           selectedIndex: _selectedTabIndex,
@@ -49,6 +49,7 @@ class _HomeScreenState extends State<HomeScreen> {
               iconActiveColor: Colors.white,
               iconColor: Colors.black,
               text: "Quran",
+              textStyle: Theme.of(context).textTheme.labelMedium!.copyWith(color: Colors.white),
               leading: SvgPicture.asset(
                 "assets/images/quran_tab_bottom_nav_icon.svg",
                 width: 20,
@@ -60,6 +61,7 @@ class _HomeScreenState extends State<HomeScreen> {
             GButton(
                 icon: Icons.clear,
                 text: "Hadeth",
+                textStyle: Theme.of(context).textTheme.labelMedium!.copyWith(color: Colors.white),
                 leading: SvgPicture.asset(
                   "assets/images/hadeth_tab_bottom_nav_icon.svg",
                   width: 20,
@@ -70,6 +72,7 @@ class _HomeScreenState extends State<HomeScreen> {
             GButton(
                 icon: Icons.clear,
                 text: "Sebha",
+                textStyle: Theme.of(context).textTheme.labelMedium!.copyWith(color: Colors.white),
                 leading: SvgPicture.asset(
                   "assets/images/sebha_tab_bottom_nav_icon.svg",
                   width: 20,
@@ -80,6 +83,7 @@ class _HomeScreenState extends State<HomeScreen> {
             GButton(
                 icon: Icons.clear,
                 text: "Radio",
+                textStyle: Theme.of(context).textTheme.labelMedium!.copyWith(color: Colors.white),
                 leading: SvgPicture.asset(
                   "assets/images/radio_tab_bottom_nav_icon.svg",
                   width: 20,
@@ -90,6 +94,7 @@ class _HomeScreenState extends State<HomeScreen> {
             GButton(
               icon: Icons.settings_outlined,
               text: "Settings",
+              textStyle: Theme.of(context).textTheme.labelMedium!.copyWith(color: Colors.white),
             ),
           ]),
     );
