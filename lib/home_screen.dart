@@ -7,7 +7,6 @@ import 'package:islami/tabs/hadeth/hadeth_tab.dart';
 import 'package:islami/tabs/quran/quran_tab.dart';
 import 'package:islami/tabs/radio_tab.dart';
 import 'package:islami/tabs/sebha/sebha_tab.dart';
-import 'package:islami/tabs/settings_tab.dart';
 
 class HomeScreen extends StatefulWidget {
   static const routeName = "/home_screen";
@@ -91,11 +90,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       _selectedTabIndex == 3 ? Colors.white : Colors.black,
                       BlendMode.srcIn),
                 )),
-            GButton(
-              icon: Icons.settings_outlined,
-              text: "Settings",
-              textStyle: Theme.of(context).textTheme.labelMedium!.copyWith(color: Colors.white),
-            ),
+
           ]),
     );
   }
@@ -105,6 +100,5 @@ class _HomeScreenState extends State<HomeScreen> {
     HadethTab(),
     SebhaTab(),
     RadioTab(),
-    SettingsTab()
   ];
 }
